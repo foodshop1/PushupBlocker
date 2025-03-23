@@ -1,5 +1,5 @@
 # PushBlock
-Project for GenAI 2025
+Winner of best healthcare hack for GenAI 2025 (virtual)
 
 NOTE: As of right now we have not uploaded this as an official extention on the chrome web store and is in its beta stages. (you can still run this as an extention)
 
