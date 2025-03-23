@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PushupBlocker Settings</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .section {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+    
+    input[type="number"] {
+      width: 60px;
+      padding: 5px;
+    }
+    
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #3367d6;
+    }
+    
+    .site-list {
+      max-height: 150px;
+      overflow-y: auto;
+      margin-top: 10px;
+    }
+    
+    .site-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .remove-site {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 2px 6px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>PushupBlocker Settings</h1>
+  
+  <div class="section">
+    <label for="pushupCount">Pushups Required to Unblock:</label>
+    <input type="number" id="pushupCount" min="1" max="100">
+    <button id="savePushupCount">Save</button>
+  </div>
+  
+  <div class="section">
+    <label for="newSite">Add Site to Block:</label>
+    <input type="text" id="newSite" placeholder="e.g., example.com">
+    <button id="addSite">Add</button>
+    
+    <div class="site-list" id="siteList">
+      <!-- Sites will be added here dynamically -->
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
